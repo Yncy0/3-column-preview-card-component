@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-drk-cyan: hsl(179, 100%, 13%);
+
+    --clr-white-p: hsla(0, 0%, 100%, 0.75);
+    --clr-l-gray: hsl(0, 0%, 95%);
+
+    --clr-trans: rgba(0, 0, 0, 0.5);
+
+    --fs: 0.938rem;
+
+    --ff-lexend-deca: "Lexend Deca", sans-serif;
+    --ff-big-shoulders-display:  "Big Shoulders Display", cursive;
+
+    --fw-medium: 400;
+    --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg{
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3{
+    font-family: var(--ff-big-shoulders-display);
+    font-size: 2.5rem;
+    color: var(--clr-l-gray);
+    text-transform: uppercase;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+p{
+    font-family: var(--ff-lexend-deca);
+    font-size: var(--fs);
+    color: var(--clr-white-p);
+}
+
+html{
+    height: 100%;
+}
+
+
+body{
+    display: grid;
+    place-content: center;
+    height: 100%;
+
+    margin: 1rem;
+    line-height: 1.7rem;
+}
+
+.wrapper{
+    max-width: 960px;
+    display: grid;
+    
+}
+
+.box{
+    padding: 3.5rem;
+}
+
+.sedans{
+    background-color: var(--clr-bright-orange);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.suvs{
+    background-color: var(--clr-dark-cyan);
+}
+
+.luxury{
+    background-color: var(--clr-very-drk-cyan);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.bt-sedans{
+    color: var(--clr-bright-orange);
+}
+
+.bt-suvs{
+    color: var(--clr-dark-cyan);
+}
+
+.bt-luxury{
+    color: var(--clr-very-drk-cyan);
+}
+
+.button{
+    margin-top: 1.7rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-inline: 2rem;
+
+    border: 2px solid var(--clr-l-gray);
+    background-color: var(--clr-l-gray);
+    border-radius: 3.125rem;
+    font-family: var(--ff-lexend-deca);
+
+    cursor: pointer;
+    
+}
+
+.button:active{
+    background-color: transparent;
+    color: var(--clr-l-gray);
+}
+
+@media (min-width: 600px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .button{
+        margin-top: 5.5rem;
+        display: inline-block;
+    }
+
+    .box{
+        padding: 2.6rem;
+    }
+
+    .sedans{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    .luxury{
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+    }
+}
